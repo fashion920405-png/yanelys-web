@@ -7,23 +7,39 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export default function Page() {
-  const products = [
-    {
-      title: "Fresas cubiertas de chocolate",
-      desc: "Cajas elegantes para cumpleaños, aniversarios y regalos.",
-      price: "Desde $25",
-    },
-    {
-      title: "Tablas de queso y charcutería",
-      desc: "Tablas personalizadas con quesos, frutas y detalles premium.",
-      price: "Desde $45",
-    },
-    {
-      title: "Cajas personalizadas con letras",
-      desc: "Diseños con iniciales, rosas y fresas.",
-      price: "Cotización personalizada",
-    },
-  ];
+const products = [
+  {
+    title: "Fresas cubiertas de chocolate",
+    desc: "Cajas decoradas con chocolate, colores y detalles personalizados.",
+    price: "Desde $35",
+  },
+  {
+    title: "Tablas de charcutería",
+    desc: "Quesos, salami, frutas, crackers y presentación premium.",
+    price: "Desde $55",
+  },
+  {
+    title: "Cajas con letras",
+    desc: "Iniciales decoradas con fresas, rosas o charcutería.",
+    price: "Desde $65",
+  },
+];
+<section className="bg-[#fff7f8] py-12">
+  <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-6 text-center">
+    <div className="bg-white p-6 rounded-2xl shadow-sm">
+      <p className="font-bold text-xl">Pedidos personalizados</p>
+      <p className="text-sm mt-2">Colores, letras y detalles según la ocasión.</p>
+    </div>
+    <div className="bg-white p-6 rounded-2xl shadow-sm">
+      <p className="font-bold text-xl">Presentación premium</p>
+      <p className="text-sm mt-2">Diseños listos para regalar o llevar a eventos.</p>
+    </div>
+    <div className="bg-white p-6 rounded-2xl shadow-sm">
+      <p className="font-bold text-xl">Ordena por WhatsApp</p>
+      <p className="text-sm mt-2">Respuesta rápida para confirmar disponibilidad.</p>
+    </div>
+  </div>
+</section>
 
   const steps = [
     "Escoge el producto",
@@ -32,7 +48,7 @@ export default function Page() {
     "Recibe tu pedido listo",
   ];
   const whatsappNumber = "18134662672";
-const whatsappMessage = "Hola, quiero hacer un pedido personalizado.";
+const whatsappMessage = "Hola, quiero hacer un pedido. Me gustaría saber disponibilidad y precios. Producto: ___ Fecha: ___ Cantidad/personas: ___";
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
@@ -64,7 +80,7 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
             Eventos especiales merecen delicias especiales.
           </h1>
           <p className="text-lg mb-6">
-            Fresas cubiertas de chocolate y tablas de charcutería para toda ocasión.
+            Pedidos personalizados para cumpleaños, aniversarios, baby showers, reuniones y detalles especiales. Ordena por WhatsApp con 24–48 horas de anticipación.
           </p>
           <Button className="rounded-full bg-[#8b2f47] text-white px-6 py-4">
             Ver catálogo

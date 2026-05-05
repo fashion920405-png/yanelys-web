@@ -89,6 +89,13 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-5 py-16 grid md:grid-cols-2 gap-10 items-center">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <Image 
+  src="/logo.png" 
+  alt="logo"
+  width={60}
+  height={60}
+  className="mb-4"
+/>
           <h1 className="font-serif text-5xl font-bold mb-6">
             Eventos especiales merecen delicias especiales.
           </h1>

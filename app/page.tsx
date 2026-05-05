@@ -41,7 +41,7 @@ export default function Page() {
 
   const whatsappNumber = "18134662672";
   const whatsappMessage =
-    "Hola, quiero hacer un pedido. Me gustaría saber disponibilidad y precios. Producto: ___ Fecha: ___ Cantidad/personas: ___";
+    "Hola, quiero cotizar un pedido.\n\nProducto:\nFecha:\nCantidad:\nDiseño o idea:\n\n¿Me puedes ayudar con opciones y precio?";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     whatsappMessage
   )}`;
@@ -66,8 +66,11 @@ export default function Page() {
 
           <a href={whatsappLink} target="_blank">
             <Button className="rounded-full bg-[#8b2f47] text-white px-5 py-2">
-              Ordenar ahora
+              Cotizar y ordenar ahora
             </Button>
+            <p className="mt-3 text-sm text-[#8b2f47] font-semibold">
+  ⚠️ Cupos limitados por día · Ordena con anticipación
+</p>
           </a>
         </div>
       </header>

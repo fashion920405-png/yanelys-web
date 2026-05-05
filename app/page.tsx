@@ -1,5 +1,18 @@
 "use client";
+import Image from "next/image";
 
+<div className="flex items-center gap-3">
+  <Image 
+    src="/logo.png" 
+    alt="Yanelys Sweet & Boards"
+    width={40}
+    height={40}
+    className="rounded-full"
+  />
+  <span className="font-semibold text-lg">
+    Yanelys Sweet & Boards
+  </span>
+</div>
 import React from "react";
 import { motion } from "framer-motion";
 import { Heart, Gift, CalendarCheck, MapPin, Phone, Camera, Star, ShoppingBag } from "lucide-react";

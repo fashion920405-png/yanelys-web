@@ -204,7 +204,7 @@ export default function Page() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[</"galeria-11.jpg", "galeria-3.jpg", "galeria-44.jpg", "galeria-2.jpg"].map(
+            {["galeria-11.jpg", "galeria-3.jpg", "galeria-44.jpg", "galeria-2.jpg"].map(
               (img) => (
                 <Image
                   key={img}

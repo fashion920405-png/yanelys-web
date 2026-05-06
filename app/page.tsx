@@ -9,7 +9,10 @@ import {
   Phone,
   Camera,
   ShoppingBag,
-} from "lucide-react, X, ChevronLeft, ChevronRight";
+  ChevronLeft,
+  ChevronRight,
+  X,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 

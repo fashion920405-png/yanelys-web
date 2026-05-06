@@ -194,34 +194,114 @@ export default function Page() {
         </div>
       </section>
 
-      {/* GALERÍA */}
-      <section id="galeria" className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-5">
-          <div className="text-center mb-10">
-            <p className="text-[#8b2f47] font-semibold uppercase tracking-[0.2em] text-sm">
-              Galería
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mt-3">
-              Diseños que venden por los ojos
-            </h2>
-          </div>
+      {/* GALERÍA POR CATEGORÍAS */}
+<section id="galeria" className="py-16 bg-white">
+  <div className="max-w-6xl mx-auto px-5">
+    <div className="text-center mb-12">
+      <p className="text-[#8b2f47] font-semibold uppercase tracking-[0.2em] text-sm">
+        Galería
+      </p>
+      <h2 className="font-serif text-4xl md:text-5xl font-bold mt-3">
+        Elige el estilo de tu pedido
+      </h2>
+      <p className="mt-4 text-[#6b4a50]">
+        Separamos las opciones para que encuentres rápido lo que necesitas.
+      </p>
+    </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {["galeria-11.jpg", "galeria-3.jpg", "galeria-44.jpg", "galeria-2.jpg"].map(
-              (img) => (
-                <Image
-                  key={img}
-                  src={`/${img}`}
-                  alt="Producto"
-                  width={400}
-                  height={400}
-                  className="aspect-square w-full object-cover rounded-3xl shadow-md"
-                />
-              )
-            )}
-          </div>
-        </div>
-      </section>
+    {/* CHARCUTERÍA */}
+    <div className="mb-14">
+      <h3 className="font-serif text-3xl font-bold mb-6 text-[#3b2528]">
+        Charcutería
+      </h3>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          "charcuteria-1.jpg",
+          "charcuteria-2.jpg",
+          "charcuteria-3.jpg",
+          "charcuteria-4.jpg",
+          "charcuteria-5.jpg",
+          "charcuteria-6.jpg",
+        ].map((img) => (
+          <Image
+            key={img}
+            src={`/${img}`}
+            alt="Charcutería"
+            width={400}
+            height={400}
+            className="aspect-square w-full object-cover rounded-3xl shadow-md"
+          />
+        ))}
+      </div>
+    </div>
+
+    {/* FRESAS CUBIERTAS */}
+    <div className="mb-14">
+      <h3 className="font-serif text-3xl font-bold mb-6 text-[#3b2528]">
+        Fresas cubiertas
+      </h3>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          "fresas-1.jpg",
+          "fresas-2.jpg",
+          "fresas-3.jpg",
+          "fresas-4.jpg",
+          "fresas-5.jpg",
+          "fresas-6.jpg",
+          "fresas-7.jpg",
+          "fresas-8.jpg",
+          "fresas-9.jpg",
+          "fresas-10.jpg",
+          "fresas-11.jpg",
+          "fresas-12.jpg",
+          "fresas-13.jpg",
+          "fresas-14.jpg",
+          "fresas-15.jpg",
+          "fresas-16.jpg",
+          "fresas-17.jpg",
+          "fresas-18.jpg",
+          "fresas-19.jpg",
+        ].map((img) => (
+          <Image
+            key={img}
+            src={`/${img}`}
+            alt="Fresas cubiertas"
+            width={400}
+            height={400}
+            className="aspect-square w-full object-cover rounded-3xl shadow-md"
+          />
+        ))}
+      </div>
+    </div>
+
+    {/* REPOSTERÍA */}
+    <div>
+      <h3 className="font-serif text-3xl font-bold mb-6 text-[#3b2528]">
+        Repostería
+      </h3>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          "reposteria-1.jpg",
+          "reposteria-2.jpg",
+          "reposteria-3.jpg",
+          "reposteria-4.jpg",
+        ].map((img) => (
+          <Image
+            key={img}
+            src={`/${img}`}
+            alt="Repostería"
+            width={400}
+            height={400}
+            className="aspect-square w-full object-cover rounded-3xl shadow-md"
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* PASOS */}
       <section id="pedidos" className="bg-[#3b2528] text-white py-16">

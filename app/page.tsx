@@ -221,7 +221,7 @@ export default function Page() {
           "charcuteria-2.jpg",
           "charcuteria-3.jpg",
           "charcuteria-4.jpg",
-          "charcuteria-5.jpg",
+          "a.jpg",
           "charcuteria-6.jpg",
         ].map((img) => (
           <Image
@@ -261,7 +261,7 @@ export default function Page() {
           "fresas-15.jpg",
           "fresas-16.jpg",
           "fresas-17.jpg",
-          "fresas-18.jpg",
+          "b.jpg",
           "fresas-19.jpg",
         ].map((img) => (
           <Image

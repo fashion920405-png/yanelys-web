@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
@@ -9,7 +9,7 @@ import {
   Phone,
   Camera,
   ShoppingBag,
-} from "lucide-react";
+} from "lucide-react, X, ChevronLeft, ChevronRight";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -45,6 +45,67 @@ export default function Page() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     whatsappMessage
   )}`;
+  const galleryImages = [
+  "charcuteria-1.jpg",
+  "charcuteria-2.jpg",
+  "charcuteria-3.jpg",
+  "charcuteria-4.jpg",
+  "charcuteria-5.jpg",
+  "fresas-1.jpg",
+  "fresas-2.jpg",
+  "fresas-3.jpg",
+  "fresas-4.jpg",
+  "fresas-5.jpg",
+  "fresas-6.jpg",
+  "fresas-7.jpg",
+  "fresas-8.jpg",
+  "fresas-9.jpg",
+  "fresas-10.jpg",
+  "fresas-11.jpg",
+  "fresas-12.jpg",
+  "fresas-13.jpg",
+  "fresas-14.jpg",
+  "fresas-15.jpg",
+  "fresas-16.jpg",
+  "fresas-17.jpg",
+  "fresas-18.jpg",
+  "fresas-19.jpg",
+  "fresas-20.jpg",
+  "fresas-21.jpg",
+  "fresas-22.jpg",
+  "reposteria-1.jpg",
+  "reposteria-2.jpg",
+  "reposteria-3.jpg",
+  "reposteria-4.jpg",
+  "variedades-1.jpg",
+  "variedades-2.jpg",
+  "variedades-3.jpg",
+  "variedades-4.jpg",
+  'variedades-5.jpg',
+  'variedades-6.jpg',
+  'variedades-7.jpg',
+  'variedades-8.jpg',
+  'variedades-9.jpg',
+  'variedades-10.jpg',
+];
+
+const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+const openImage = (img: string) => {
+  setSelectedImage(galleryImages.indexOf(img));
+};
+
+const nextImage = () => {
+  if (selectedImage === null) return;
+  setSelectedImage((selectedImage + 1) % galleryImages.length);
+};
+
+const prevImage = () => {
+  if (selectedImage === null) return;
+  setSelectedImage(
+    selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1
+  );
+};
 
   return (
     <main className="min-h-screen bg-[#fff7f8] text-[#3b2528]">
@@ -224,14 +285,15 @@ export default function Page() {
           "charcuteria-5.jpg",
           "charcuteria-6.jpg",
         ].map((img) => (
-          <Image
-            key={img}
-            src={`/${img}`}
-            alt="Charcutería"
-            width={400}
-            height={400}
-            className="aspect-square w-full object-cover rounded-3xl shadow-md"
-          />
+  <button key={img} onClick={() => openImage(img)}>
+  <Image
+    src={`/${img}`}
+    alt="Producto"
+    width={400}
+    height={400}
+    className="aspect-square w-full object-cover rounded-3xl shadow-md hover:scale-105 transition"
+  />
+</button>
         ))}
       </div>
     </div>
@@ -263,15 +325,19 @@ export default function Page() {
           "fresas-17.jpg",
           "fresas-18.jpg",
           "fresas-19.jpg",
+          "fresas-20.jpg",
+          "fresas-21.jpg",
+          "fresas-22.jpg",
         ].map((img) => (
-          <Image
-            key={img}
-            src={`/${img}`}
-            alt="Fresas cubiertas"
-            width={400}
-            height={400}
-            className="aspect-square w-full object-cover rounded-3xl shadow-md"
-          />
+<button key={img} onClick={() => openImage(img)}>
+  <Image
+    src={`/${img}`}
+    alt="Producto"
+    width={400}
+    height={400}
+    className="aspect-square w-full object-cover rounded-3xl shadow-md hover:scale-105 transition"
+  />
+</button>
         ))}
       </div>
     </div>
@@ -289,17 +355,54 @@ export default function Page() {
           "reposteria-3.jpg",
           "reposteria-4.jpg",
         ].map((img) => (
-          <Image
-            key={img}
-            src={`/${img}`}
-            alt="Repostería"
-            width={400}
-            height={400}
-            className="aspect-square w-full object-cover rounded-3xl shadow-md"
-          />
+<button key={img} onClick={() => openImage(img)}>
+  <Image
+    src={`/${img}`}
+    alt="Producto"
+    width={400}
+    height={400}
+    className="aspect-square w-full object-cover rounded-3xl shadow-md hover:scale-105 transition"
+  />
+</button>
         ))}
       </div>
     </div>
+
+    {/* VARIEDADES */}
+<div className="mt-14">
+  <h3 className="font-serif text-3xl font-bold mb-6 text-[#3b2528]">
+    Variedades
+  </h3>
+
+  <p className="text-[#6b4a50] mb-6">
+    Galletas cubiertas de chocolate, marshmallows cubiertos y magdalenas decoradas.
+  </p>
+
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {[
+      "variedades-1.jpg",
+      "variedades-2.jpg",
+      "variedades-3.jpg",
+      "variedades-4.jpg",
+      "variedades-5.jpg",
+      "variedades-6.jpg",
+      "variedades-7.jpg",
+      "variedades-8.jpg",
+      'variedades-9.jpg',
+      'variedades-10.jpg',
+    ].map((img) => (
+<button key={img} onClick={() => openImage(img)}>
+  <Image
+    src={`/${img}`}
+    alt="Producto"
+    width={400}
+    height={400}
+    className="aspect-square w-full object-cover rounded-3xl shadow-md hover:scale-105 transition"
+  />
+</button>
+    ))}
+  </div>
+</div>
   </div>
 </section>
 
@@ -382,6 +485,38 @@ export default function Page() {
       >
         💬 Ordenar
       </a>
+      {selectedImage !== null && (
+  <div className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center px-4">
+    <button
+      onClick={() => setSelectedImage(null)}
+      className="absolute top-6 right-6 text-white"
+    >
+      <X size={36} />
+    </button>
+
+    <button
+      onClick={prevImage}
+      className="absolute left-4 text-white bg-white/10 p-3 rounded-full"
+    >
+      <ChevronLeft size={36} />
+    </button>
+
+    <Image
+      src={`/${galleryImages[selectedImage]}`}
+      alt="Imagen ampliada"
+      width={1000}
+      height={1000}
+      className="max-h-[85vh] w-auto object-contain rounded-2xl"
+    />
+
+    <button
+      onClick={nextImage}
+      className="absolute right-4 text-white bg-white/10 p-3 rounded-full"
+    >
+      <ChevronRight size={36} />
+    </button>
+  </div>
+)}
     </main>
   );
 }

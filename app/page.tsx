@@ -559,7 +559,7 @@ export default function Page() {
             </p>
             <p className="mb-4 flex gap-3 text-[#6b4a50]">
               <Camera className="text-[#8b2f47]" /> Instagram:
-              @cheesebrry_delights
+              @cheeseberry_delights
             </p>
             <p className="mb-4 flex gap-3 text-[#6b4a50]">
               <MapPin className="text-[#8b2f47]" /> {t.localDelivery}
